@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>線上搶麥系統</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="shortcut icon" href="#"/>
+</head>
+<body>
+    <div class="big_container">
+        <div class="table_container">
+            <table id="song_table">
+                <tr>
+                    <th>Songs Name</th>
+                </tr>
+                <tr>
+                    <td song_number="song1">Spiral</td>
+                </tr>
+                <tr>
+                    <td song_number="song2">Fate</td>
+                </tr>
+                <tr>
+                    <td song_number="song3">紙一重</td>
+                </tr>
+                <tr>
+                    <td song_number="song4">apocalypse</td>
+                </tr>
+                <tr>
+                    <td song_number="song5">heikousen</td>
+                </tr>
+                <tr>
+                    <td song_number="song6">籠の中に鳥</td>
+                </tr>
+            </table>
+            <button id="music_pause">pause/resume the music</button>
+        </div>
+        <div class="lyrics_and_mic">
+            <div class="container"> 
+                <div class="lyrics">
+                    <p></p>
+                </div>
+            </div>
+            <button class="grab_button">MIC</button>
+        </div> 
+    </div>
+    
+    <div class="users">
+        <!-- 房間中所有使用者的頭像 -->
+        <div class="user"></div>
+        <div class="user"></div>
+        <!-- 添加更多用戶 -->
+    </div>
+    
+    <audio controls id="audio_player" autoplay hidden>
+        <source src="" type="audio/mpeg">dd
+        Your browser does not support the audio element.
+    </audio>
+    <audio controls id="local_audio" autoplay></audio>
+    <audio controls id="remote_audio" autoplay></audio>
+    
+    <script src="{{ url_for('static', filename='javascript/script.js') }}"></script>
+</body>
+</html>
