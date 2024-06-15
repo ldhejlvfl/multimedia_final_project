@@ -56,9 +56,17 @@
         <source src="" type="audio/mpeg">dd
         Your browser does not support the audio element.
     </audio>
-    <audio controls id="local_audio" autoplay></audio>
-    <audio controls id="remote_audio" autoplay></audio>
+    <audio controls id="peer_A" autoplay hidden></audio>
+    <audio controls id="peer_B" autoplay hidden></audio>
+    <div class="test">
+        <button id="create_offer">Create Offer</button>
+        <textarea id="offer_sdp"></textarea>
+        <button id="create_answer">Create Answer</button>
+        <textarea id="answer_sdp"></textarea>
+        <button id="add_answer">Add answer</button>
+    </div>
     
+
     <script src="{{ url_for('static', filename='javascript/script.js') }}"></script>
 </body>
 </html>
